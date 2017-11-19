@@ -127,6 +127,9 @@ header{
                                 color: #8f9099;
                             }
                         }
+                        &:last-child{
+                            border: none;
+                        }
                     }
                 }
             }
