@@ -1,0 +1,195 @@
+/*
+Theme Name: LESENTRESTIENS
+Theme URI: http://wordpress.org/themes/twentyfourteen
+Author: the ghaoui hamdi
+Author URI: ghaoui.hamdi@gmail.com
+Description: GH
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, red, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentysixteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import "compass";
+$orange: #f18130;
+$blue: #009ee2;
+$blue-dark: #2a2664;
+@font-face {
+    font-family: 'robotobold';
+    src: url('fonts/Roboto-Bold-webfont.eot');
+    src: url('fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-Bold-webfont.woff2') format('woff2'),
+        url('fonts/Roboto-Bold-webfont.woff') format('woff'),
+        url('fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+        url('fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+@font-face {
+    font-family: 'robotomedium';
+    src: url('fonts/Roboto-Medium-webfont.eot');
+    src: url('fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-Medium-webfont.woff2') format('woff2'),
+        url('fonts/Roboto-Medium-webfont.woff') format('woff'),
+        url('fonts/Roboto-Medium-webfont.ttf') format('truetype'),
+        url('fonts/Roboto-Medium-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+@font-face {
+    font-family: 'robotoblack';
+    src: url('fonts/Roboto-Black-webfont.eot');
+    src: url('fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-Black-webfont.woff2') format('woff2'),
+        url('fonts/Roboto-Black-webfont.woff') format('woff'),
+        url('fonts/Roboto-Black-webfont.ttf') format('truetype'),
+        url('fonts/Roboto-Black-webfont.svg#robotoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+@font-face {
+    font-family: 'robotolight';
+    src: url('fonts/Roboto-Light-webfont.eot');
+    src: url('fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Roboto-Light-webfont.woff2') format('woff2'),
+        url('fonts/Roboto-Light-webfont.woff') format('woff'),
+        url('fonts/Roboto-Light-webfont.ttf') format('truetype'),
+        url('fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+
+body{
+    font-family: "robotolight";
+    .back-top {
+        display: none;
+        width: 41px;
+        height: 41px;
+        border-radius : 50%;
+        border: 2px solid red;
+        position: fixed;
+        right: 20px;
+        bottom: 3em;
+        text-decoration: none;
+        z-index: 6;
+        font-size: 20px;
+        color: red;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 7px;
+    }
+    @media(max-width: 959px){
+        padding-top: 15px;
+    }
+}
+header{
+    position: relative;
+    
+    .top-header{
+        background-color: #eef2f4;
+        >.container{
+            position: relative;
+        }
+        .logo{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 9999;
+        }
+        .menu-top-header{
+            padding-left: 0;
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+            >li{
+                margin-left: 7px;
+                margin-right: 7px;
+                .language-chooser{
+                    display: flex;
+                    list-style: none;
+                    padding-left: 0;
+                    justify-content: space-between;
+                    li{
+                        border-right: 1px solid #8f9099;
+                        padding-right: 7px;
+                        padding-left: 7px;
+                        a{ 
+                            span{
+                                color: #8f9099;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu-header{
+        .menu-header-container{
+            display: flex;
+            justify-content: flex-end;
+            .menu-accueil-container{
+                .menu{
+                    display: flex;
+                    list-style: none;
+                    .menu-item{
+                        &.menu-item-has-children{
+                            .sub-menu{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }     
+    }
+}
+.slider{
+    position: relative;
+    .on-slider{
+        position: absolute;
+        left: 0;
+        bottom: 45px;
+        width: 100%;
+        .items-on-slider{
+            padding-left: 0;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            li{
+                width: 30%;
+                a{
+                    display: block;
+                    height: 75px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                }
+                &.presence{
+                    a{
+                        background-color: $orange;
+                    }
+                }
+                &.agenda{
+                    a{
+                        background-color: $blue;
+                    }
+                }
+                &.inscription{
+                    a{
+                        background-color: $blue-dark;
+                    }
+                }
+            }
+        }
+    }
+}
